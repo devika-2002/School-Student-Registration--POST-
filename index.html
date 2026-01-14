@@ -1,0 +1,48 @@
+<html>
+    <head>
+    <title>School Student Registration</title>
+    </head>
+    <body>
+        <form id="studentForm">
+            <label>
+              Name:
+              <input type="text" id="name">
+            </label>
+            <br><br>
+
+            <label>
+              Age:
+              <input type="number" id="age">
+            </label>
+            <br><br>
+
+            <label>
+              Grade:
+              <input type="number" id="grade">
+            </label>
+            <br><br>
+
+            <h3>Favorite Subjects:</h3>
+            <label><input type="checkbox" value="Math"> Math</label>
+            <label><input type="checkbox" value="English"> English</label>
+            <label><input type="checkbox" value="History"> History</label>
+            <label><input type="checkbox" value="Science"> Science</label>
+
+            <br><br>
+
+            <label>
+              <input type="checkbox" id="scholarship">
+              Has Scholarship
+            </label>
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="error" style="color:red;"></div>
+        <div id="confirmation" style="color:green;"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
