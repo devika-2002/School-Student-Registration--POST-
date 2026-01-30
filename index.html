@@ -1,47 +1,30 @@
 <html>
     <head>
-    <title>School Student Registration</title>
+        <title>School Student Registration</title>
     </head>
     <body>
-        <form id="studentForm">
-            <label>
-              Name:
-              <input type="text" id="name">
-            </label>
-            <br><br>
+        <from id="studentForm">
+        <label>Name: <input type="text" id="name"></label>
+        <br>
+        <label>Age: <input type="number" id="age"></label>
+        <br>
+        <label>Grade: <input type="number" id="grade"></label>
+        <br>
 
-            <label>
-              Age:
-              <input type="number" id="age">
-            </label>
-            <br><br>
+        <p>Favorite Subjects: </p>
+        <label><input type="checkbox" value="Math">Math</label><br>
+        <label><input type="checkbox" value="Science">Science</label><br>
+        <label><input type="checkbox" value="English">English</label><br>
+        <label><input type="checkbox" value="History">History</label><br>
 
-            <label>
-              Grade:
-              <input type="number" id="grade">
-            </label>
-            <br><br>
+        <label><input type="checkbox" id="scholarship">Has Scholarship</label><br>
 
-            <h3>Favorite Subjects:</h3>
-            <label><input type="checkbox" value="Math"> Math</label>
-            <label><input type="checkbox" value="English"> English</label>
-            <label><input type="checkbox" value="History"> History</label>
-            <label><input type="checkbox" value="Science"> Science</label>
+        <button type="submit">Submit</button>
 
-            <br><br>
+        </from>
 
-            <label>
-              <input type="checkbox" id="scholarship">
-              Has Scholarship
-            </label>
-
-            <br><br>
-
-            <button type="submit">Submit</button>
-        </form>
-
-        <div id="error" style="color:red;"></div>
-        <div id="confirmation" style="color:green;"></div>
+        <p id="error" style="color: red;"></p>
+        <p id="confirmation" style="color: green;"></p>
 
         <script src="script.js"></script>
     </body>

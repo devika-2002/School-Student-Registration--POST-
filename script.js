@@ -9,13 +9,11 @@ const error = document.getElementById("error");
 const confirmation = document.getElementById("confirmation");
 
 studentForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // stop reload
+    event.preventDefault();
 
-    // clear messages
     error.textContent = "";
     confirmation.textContent = "";
 
-    // test output
     confirmation.textContent = "Form submitted successfully!";
 });
 
