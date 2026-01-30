@@ -1,0 +1,167 @@
+Problem Statement
+A school administrator wants to move away from paper forms and start collecting student details digitally. 
+They ask you to build a simple webpage where they can type a new student’s information and send it directly to an online database.
+
+The page should let them fill in a small form, click a button, and send the data as JSON to a server using a POST request. 
+After sending, the page should show a confirmation with the student information that was submitted.
+
+You will simulate a real backend using an API that echoes back the JSON you send.
+
+API Information
+For this challenge, we will use a dummy API called HTTPBin. 
+It lets you practice sending POST requests safely because it does not store your data — it simply sends back whatever you send.
+
+Endpoint and Requirements:
+
+You will send your data to:
+
+https://httpbin.org/post
+Your POST request must include:
+
+Method: POST
+Headers: { "Content-Type": "application/json" }
+Body: a JSON string containing a student object with this shape:
+name: string
+age: number
+grade: number
+favoriteSubjects: array of strings
+hasScholarship: boolean
+What the Response Looks Like:
+
+HTTPBin sends back a JSON response that includes many fields, but the most important one is:
+
+json — this contains the exact same object you sent in your POST request.
+Example structure of what you will receive:
+
+plain text
+{
+  "json": {
+    "name": "Alice",
+    "age": 12,
+    "grade": "7",
+    "favoriteSubjects": ["Math", "Science"],
+    "hasScholarship": true
+  },
+  ... other diagnostic fields ...
+}
+You will use the json field from this response to show a confirmation message on your webpage.
+
+Testing and Debugging
+To fully understand the challenge, you should follow these two steps:
+
+Use Postman to learn how the API behaves
+Send a test request to the API endpoint.
+Check the response to understand which fields you will receive.
+This helps you understand what your request and response will look like before writing any code.
+Build and test your project locally
+Write your code on your local computer using an index.html and script.js file.
+Open your HTML file in the browser to test your interface and API calls.
+Use DevTools effectively:
+Sources tab: to debug your JavaScript step by step and inspect variables.
+Network tab: to see each request your page makes, what data was sent, and what response came back.
+
+Your Task
+Create a webpage with:
+A text input for the student’s full name.
+A number input for the student’s age.
+A number input for the student’s grade (for example: 5, 8, 10).
+A group of checkboxes for favorite subjects (for example: Math, Science, English, History).
+A checkbox for whether the student has a scholarship.
+A Submit button.
+
+An area to display a confirmation message with the submitted data.
+An area to display error messages.
+When the page first loads:
+The confirmation and error areas should be empty.
+No API call is made automatically.
+When the user clicks the Submit button:
+Read all values from the form fields.
+Clear any old confirmation or error messages.
+
+Validate the input:
+Name must not be empty.
+Age must be a positive number.
+At least one favorite subject must be selected.
+If validation fails, show a clear error message and do not call the API.
+If validation passes:
+Build a JavaScript object with this shape:
+name: string
+age: number
+grade: string
+favoriteSubjects: array of strings
+hasScholarship: boolean
+Convert this object to JSON.
+
+Send a POST request to https://httpbin.org/post using fetch() with:
+method: "POST"
+headers including "Content-Type": "application/json"
+body set to the JSON string.
+
+After the API response:
+If the response is not OK (for example, response.ok is false), show an error message like: "Could not save student. Please try again."
+If the response is OK:
+Parse the JSON response.
+Find the part of the response that contains the JSON you sent.
+Use that data to display a confirmation message that includes:
+
+The student’s name.
+The grade.
+The list of favorite subjects.
+Whether they have a scholarship.
+
+Error handling:
+Any error during the fetch process, such as network issues or unexpected JSON structure, 
+should be shown in the error area instead of leaving the page blank or confusing.
+The confirmation area should be cleared when an error is shown.
+
+
+What does join() do?
+join() converts an array into a single string.
+
+join() joins all elements of an array into one string, using a separator.
+The join() method converts an array into a string by placing a specified separator between each element.
+
+
+This line converts the student data object into JSON text and sends it to the server as the request body.
+
+What actually happens step by step?
+
+1️⃣ You create a JS object (studentData)
+2️⃣ JSON.stringify() converts it into JSON text
+3️⃣ body sends that text to the server
+4️⃣ Server receives the JSON
+5️⃣ Server converts JSON back to object
+
+Why do we NEED this?
+
+Because:
+
+Browsers cannot send JavaScript objects over the internet
+
+HTTP only sends text
+JSON is a text format
+So we convert object ➜ text
+
+What does JSON.stringify() do?
+JSON.stringify():
+Converts a JavaScript object into a JSON string (text)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

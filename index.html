@@ -3,29 +3,28 @@
         <title>School Student Registration</title>
     </head>
     <body>
-        <from id="studentForm">
-        <label>Name: <input type="text" id="name"></label>
-        <br>
-        <label>Age: <input type="number" id="age"></label>
-        <br>
-        <label>Grade: <input type="number" id="grade"></label>
-        <br>
+        <form id="studentForm">
+            <label>Name: <input type="text" id="name"></label>
+            <br>
+            <label>Age: <input type="number" id="age"></label>
+            <br>
+            <label>Grade: <input type="number" id="grade"></label>
+            <br>
 
-        <p>Favorite Subjects: </p>
-        <label><input type="checkbox" value="Math">Math</label><br>
-        <label><input type="checkbox" value="Science">Science</label><br>
-        <label><input type="checkbox" value="English">English</label><br>
-        <label><input type="checkbox" value="History">History</label><br>
+            <p>Favorite Subjects: </p>
+            <label><input type="checkbox" value="Math" class="subject">Math</label><br>
+            <label><input type="checkbox" value="Science" class="subject">Science</label><br>
+            <label><input type="checkbox" value="English" class="subject">English</label><br>
+            <label><input type="checkbox" value="History" class="subject">History</label><br>
 
-        <label><input type="checkbox" id="scholarship">Has Scholarship</label><br>
+            <label><input type="checkbox" id="scholarship">Has Scholarship</label><br>
 
-        <button type="submit">Submit</button>
-
-        </from>
+            <button type="submit">Submit</button>
+        </form>
 
         <p id="error" style="color: red;"></p>
         <p id="confirmation" style="color: green;"></p>
 
         <script src="script.js"></script>
-    </body>
+    </body>  
 </html>
